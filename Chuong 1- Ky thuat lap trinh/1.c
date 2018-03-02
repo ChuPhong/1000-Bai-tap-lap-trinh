@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Tính S(n) = 1 + 2 + 3 + … + n.
+// Tính S(n) = 1 + 2 + 3 + ... + n.
 
 int main() {
     int n = 10;
