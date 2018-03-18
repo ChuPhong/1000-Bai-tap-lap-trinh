@@ -1,18 +1,22 @@
 #include <stdio.h>
 
-// Tính S(n) = 1/2 + 1/4 + ... + 1/2n
-
-int main() {
-    int n = 10;
-
-    float sum = 0.0;
-
-    for (int i = 1; i <= n; ++i)
-    {
-        sum += 1.0/(2*i);
+float Sum(int n)
+{
+    float sum = 0;
+    for (int i = 2; i <= 2*n; i += 2) {
+        sum += 1.0/i;
     }
+    return sum;
+}
 
-    printf("%f", sum);
+int main()
+{
+    int number;
+
+    printf("Enter number: ");
+    scanf("%d", &number);
+
+    printf("Khu de quy: %f", Sum(number));
 
     return 0;
 }
