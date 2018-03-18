@@ -16,7 +16,7 @@ int main()
     printf("Enter number: ");
     scanf("%d", &number);
 
-    printf("Khu de quy: %f", Sum(number));
+    printf("Sum = %f", Sum(number));
 
     return 0;
 }
