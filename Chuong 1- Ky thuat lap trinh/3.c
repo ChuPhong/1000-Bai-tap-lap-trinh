@@ -1,17 +1,32 @@
 #include <stdio.h>
 
-// Tính S(n) = 1 + 1/2 + 1/3 + ... + 1/n
+float DeQuy(int n);
+float KhuDeQuy(int n);
 
-int main() {
-    int n = 5;
-    float sum;
+float DeQuy(int n)
+{
+    if (n <= 1) return 1;
+    return 1.0/n + DeQuy(n - 1);
+}
 
-    for (int i = 1; i <= n; ++i)
-    {
+float KhuDeQuy(int n)
+{
+    float sum = 0;
+    for (int i = 1; i <= n; ++i) {
         sum += 1.0/i;
     }
+    return sum;
+}
 
-    printf("%f", sum);
+int main()
+{
+    int number;
+
+    printf("Enter number: ");
+    scanf("%d", &number);
+
+    printf("De quy: %f\n", DeQuy(number));
+    printf("Khu de quy: %f", KhuDeQuy(number));
 
     return 0;
 }
